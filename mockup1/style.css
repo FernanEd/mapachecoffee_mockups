@@ -82,7 +82,7 @@ header nav button:hover {
 }
 
 main {
-  width: 1280px;
+  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem 0;
   display: -webkit-box;
@@ -97,7 +97,30 @@ main {
           box-sizing: border-box;
 }
 
-main h1 {
+main #title {
+  margin: 1rem 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+main #title .h1-line {
+  background-color: #999;
+  height: 4px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+main #title h1 {
   text-align: center;
 }
 
