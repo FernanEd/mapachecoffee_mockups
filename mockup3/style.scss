@@ -1,0 +1,131 @@
+$bg-c: #f2f2f2;
+$primary-c: #243e8c;
+$hightlight-c: #8ab839;
+$dark-c: #2e2e2e;
+$secondary-c: #434f5b;
+
+$shadow-sm: 0 1px 3px 1px rgba(0, 0, 0, 0.2);
+$shadow-md: 0 1px 5px 1px rgba(0, 0, 0, 0.3);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Aileron";
+}
+
+body {
+  background-color: $bg-c;
+  color: $dark-c;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 1rem 10%;
+  box-shadow: $shadow-sm;
+
+  #logo {
+    img {
+      width: 200px;
+      height: auto;
+    }
+  }
+
+  nav {
+    display: flex;
+    gap: 1rem;
+
+    button {
+      width: 100%;
+      border: 0;
+      background-color: $hightlight-c;
+      color: $bg-c;
+      padding: 0.5rem;
+      font-size: 1rem;
+      box-shadow: $shadow-sm;
+    }
+  }
+}
+
+#coffee-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+
+  article {
+    max-width: 300px;
+    padding: 1rem;
+    box-shadow: $shadow-sm;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .article-title {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    p {
+      text-align: justify;
+    }
+
+    footer {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      button {
+        width: 100%;
+        border: 0;
+
+        color: $bg-c;
+        padding: 0.5rem;
+        font-size: 1rem;
+        box-shadow: $shadow-sm;
+      }
+
+      :first-child {
+        background-color: $primary-c;
+      }
+      :last-child {
+        background-color: $dark-c;
+      }
+    }
+  }
+}
+
+main {
+  h1 {
+    color: $hightlight-c;
+    text-align: center;
+    margin: 2rem 0;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $hightlight-c;
+}
+
+#main-footer {
+  margin: auto 0 0 0;
+  padding: 1rem;
+  text-align: center;
+  background-color: $dark-c;
+  color: $bg-c;
+}
