@@ -23,6 +23,13 @@ body {
   min-height: 100vh;
 }
 
+#logo {
+  img {
+    width: 200px;
+    height: auto;
+  }
+}
+
 header {
   background: $primary-color;
   padding: 1rem 10%;
@@ -31,19 +38,19 @@ header {
   align-items: flex-end;
   gap: 2rem;
 
+  // border-bottom: 2px dotted $text-color;
+
   nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 0.5rem;
+    gap: 1rem;
 
     button {
       font-size: 1.2rem;
       background: none;
-      padding: 0.5rem;
       border: 0;
-      text-transform: uppercase;
       font-weight: bold;
       cursor: pointer;
       color: $text-color;
@@ -53,17 +60,16 @@ header {
   .access {
     margin: 0 0 0 auto;
   }
-
-  border-bottom: 2px dotted $text-color;
 }
 
 main {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  align-items: center;
+  gap: 6rem;
   padding: 2rem 0;
   h1 {
-    text-align: center;
+    border-bottom: 2px solid $text-color;
   }
 }
 
@@ -78,6 +84,7 @@ main {
     box-sizing: content-box;
     display: flex;
     flex-direction: column;
+    gap: 2rem;
 
     div {
       .title {
@@ -95,15 +102,13 @@ main {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 0.5rem;
+      gap: 1rem;
       button {
-        font-size: 0.95rem;
-        background: $secondary-color;
+        font-size: 1rem;
+        background: none;
         padding: 0.25rem 0.5rem;
-        border: 2px solid $text-color;
-        border-radius: 0.5rem;
+        border: 0;
         font-weight: bold;
-        text-transform: uppercase;
         cursor: pointer;
         color: $text-color;
       }
@@ -127,13 +132,17 @@ a {
 #main-footer {
   margin: auto 0 0 0;
   font-weight: bold;
-  text-align: center;
-  background-color: $text-color;
-  color: $bg-color;
   padding: 0.5rem;
 }
 
 @media (max-width: 768px) {
+  #logo {
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
   header {
     justify-content: center;
 
@@ -149,6 +158,10 @@ a {
   }
 
   #coffee-wrapper {
+    article {
+      padding: 1rem;
+      box-sizing: border-box;
+    }
     article:not(article:last-of-type) {
       border: 0;
       border-bottom: 2px solid $text-color;

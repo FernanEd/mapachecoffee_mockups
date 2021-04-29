@@ -19,6 +19,11 @@ body {
   min-height: 100vh;
 }
 
+#logo img {
+  width: 200px;
+  height: auto;
+}
+
 header {
   background: #e09d8b;
   padding: 1rem 10%;
@@ -29,7 +34,6 @@ header {
       -ms-flex-align: end;
           align-items: flex-end;
   gap: 2rem;
-  border-bottom: 2px dotted #333;
 }
 
 header nav {
@@ -44,15 +48,13 @@ header nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 header nav button {
   font-size: 1.2rem;
   background: none;
-  padding: 0.5rem;
   border: 0;
-  text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
   color: #333;
@@ -70,12 +72,15 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6rem;
   padding: 2rem 0;
 }
 
 main h1 {
-  text-align: center;
+  border-bottom: 2px solid #333;
 }
 
 #coffee-wrapper {
@@ -101,6 +106,7 @@ main h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 2rem;
 }
 
 #coffee-wrapper article div .title {
@@ -123,17 +129,15 @@ main h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 #coffee-wrapper article footer button {
-  font-size: 0.95rem;
-  background: #f0bd89;
+  font-size: 1rem;
+  background: none;
   padding: 0.25rem 0.5rem;
-  border: 2px solid #333;
-  border-radius: 0.5rem;
+  border: 0;
   font-weight: bold;
-  text-transform: uppercase;
   cursor: pointer;
   color: #333;
 }
@@ -154,13 +158,14 @@ a {
 #main-footer {
   margin: auto 0 0 0;
   font-weight: bold;
-  text-align: center;
-  background-color: #333;
-  color: #f7eac0;
   padding: 0.5rem;
 }
 
 @media (max-width: 768px) {
+  #logo img {
+    width: 100%;
+    height: auto;
+  }
   header {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -181,6 +186,11 @@ a {
   }
   header .access {
     margin: 0;
+  }
+  #coffee-wrapper article {
+    padding: 1rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   #coffee-wrapper article:not(article:last-of-type) {
     border: 0;
